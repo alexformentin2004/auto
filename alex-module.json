@@ -1,0 +1,82 @@
+{
+  "moduleId": "auto",
+  "name": "AUTO",
+  "appVersion": "1.0.0-rc",
+  "schemaVersion": 5,
+  "contractVersion": "1.0.0",
+  "integrationVersion": "1.0.0",
+  "namespace": "alex.auto",
+  "entrypoint": "./index.html",
+  "offlineFirst": true,
+  "standalone": true,
+  "deepLink": {
+    "canonicalScheme": "auto://",
+    "webQueryParam": "alexTarget",
+    "vehicleContextParam": "vehicleId"
+  },
+  "contracts": [
+    "today",
+    "insights",
+    "hubSummary",
+    "events",
+    "quickActions",
+    "upcomingMaintenance"
+  ],
+  "capabilities": [
+    "vehicles",
+    "odometer",
+    "fuel",
+    "maintenance",
+    "maintenancePlans",
+    "components",
+    "costs",
+    "recurringCosts",
+    "deadlines",
+    "tco",
+    "backup",
+    "historyFilters",
+    "localRecovery",
+    "accessibilityHardening",
+    "strictValidation",
+    "pwaDiagnostics",
+    "progressiveHistory",
+    "atomicImport"
+  ],
+  "routes": [
+    "auto://dashboard",
+    "auto://vehicles",
+    "auto://fuel",
+    "auto://fuel/new",
+    "auto://odometer/new",
+    "auto://maintenance",
+    "auto://maintenance/new",
+    "auto://maintenance/plan/new",
+    "auto://component/new",
+    "auto://costs",
+    "auto://costs/new",
+    "auto://deadlines",
+    "auto://deadlines/new"
+  ],
+  "quickActions": [
+    {
+      "actionId": "fuel.new",
+      "label": "Aggiungi rifornimento",
+      "target": "auto://fuel/new"
+    },
+    {
+      "actionId": "odometer.new",
+      "label": "Registra km",
+      "target": "auto://odometer/new"
+    },
+    {
+      "actionId": "maintenance.new",
+      "label": "Registra manutenzione",
+      "target": "auto://maintenance/new"
+    },
+    {
+      "actionId": "costs.new",
+      "label": "Aggiungi costo",
+      "target": "auto://costs/new"
+    }
+  ]
+}
